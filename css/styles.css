@@ -1,14 +1,16 @@
-/* font-family: 'Libre Baskerville', serif;
-font-family: 'Ubuntu', sans-serif; */
-
 :root {
-    --background-primary:  #FFF3E4;
-    --text-primary:#616161;
+    --white: #fff;
+    --primary: #b6a188;
+    --text-bold: #3a3a3a;
+    --text-primary: #969696;
+    --text-secondary: #717171;
+    --border-color: #e6e6e6;
+    --text-primary-hover: #3d3d3d;
 }
 
 
 html {
-    font-size: 62.5%; /* Now 10px = 1rem! */
+    font-size: 62.5%;
     box-sizing: border-box;
 }
 
@@ -17,10 +19,10 @@ html {
 }
   
 body {
-    font-size: 16px; /* px fallback */
-    font-size: 1.6rem; /* default font-size for document */
-    line-height: 1.5; /* a nice line-height */
-    background-color: #FFF3E4;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
 }
 
 /** GENERALES **/
@@ -30,48 +32,100 @@ a {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 120rem;
+    max-width: 125rem;
 }
 
+
+/** UTILIDADES **/
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.btn {
+    color: var(--white);
+    margin-top: .5rem;
+    padding: 2rem 4rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border:none;
+    letter-spacing: 1.5px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn:hover {
+    background-color:rgb(160, 142, 120);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
 
 /** INICIO **/
 
-/* Header */
-.nav-items {
-    display: flex;
-    justify-content:space-evenly;
-    padding: 2.5rem;
-    background-color: var(--background-primary);
+/* Presentacion */
+.header-container {
+    padding: 3rem;
 }
 
-.hover-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background-color: #a1887f;
-    transition: width .3s;
+.site-logo {
+    width: 12rem;
 }
 
-.hover-link:hover::after {
-    width: 100%;
-    transition: width .3s;
+.header-icon {
+    color: var(--primary);
+    margin-right: 1rem;
+}
+
+.info-title {
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--text-bold);
+}
+
+.info {
+    margin: .5rem 0;
+    padding-left: 3rem;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
 }
 
 
+/* Navegacion principal */ 
+.nav-principal {
+    border-top: 1px solid var(--border-color);
+}
 
 .nav-principal a {
-   font-family: 'Libre Baskerville', serif;
-   color: var(--text-primary);
+    color: var(--text-primary);
+    font-size: 1.7rem;
+    transition: color .2s ease;
+    letter-spacing: 1.5px;
+    font-weight: 500;
 }
 
-
-
-/* Main */
-main {
-    background-color: var(--background-primary);
+.nav-principal a:hover {
+    color: var(--text-primary-hover);
 }
