@@ -22,6 +22,7 @@ body {
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 1.5;
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -55,6 +56,10 @@ img {
     justify-content: space-between;
 }
 
+.justify-content-center {
+    justify-content: center;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -83,6 +88,10 @@ img {
     background-color: var(--primary);
 }
 
+.btn-primary-fixed {
+    background-color:rgb(160, 142, 120);
+}
+
 /** INICIO **/
 
 /* Presentacion */
@@ -101,14 +110,14 @@ img {
 
 .info-title {
     font-weight: 700;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: var(--text-bold);
 }
 
 .info {
     margin: .5rem 0;
     padding-left: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--text-secondary);
 }
 
@@ -116,11 +125,14 @@ img {
 /* Navegacion principal */ 
 .nav-principal {
     border-top: 1px solid var(--border-color);
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(150,150,150,150.75);
+    -moz-box-shadow:  0px 2px 6px 0px rgba(150,150,150,150.75);
+    box-shadow:  0px 2px 6px 0px rgba(150,150,150,150.75);
 }
 
 .nav-principal a {
     color: var(--text-primary);
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     transition: color .2s ease;
     letter-spacing: 1.5px;
     font-weight: 500;
@@ -142,4 +154,58 @@ img {
 .hover-link:hover::after {
     width: 100%;
     transition: width .3s;
+}
+
+/* Hero Image */
+.hero-image {
+    filter: contrast(150%);
+    background-image: linear-gradient(140deg,
+        rgba(246, 246, 246, 1), 
+        rgba(246, 246, 246, 0.1)),  
+        url("../img/bg-play.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75%;
+    position: relative;
+    -webkit-box-shadow: inset 0px 2px 6px 0px rgba(150,150,150,150.75);
+    -moz-box-shadow: inset 0px 2px 6px 0px rgba(150,150,150,150.75);
+    box-shadow: inset 0px 2px 6px 0px rgba(150,150,150,150.75);
+}
+
+.hero-image .hero-text {
+    color: var(--text-bold);
+    position: absolute;
+    width: 45%;
+    height: 50%;
+    top: 20%;
+    left: 15%;
+}
+
+.hero-image .hero-text h1 {
+    font-size: 8rem;
+    font-weight: 500;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    margin: 0;
+}
+
+.hero-image .hero-text span::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 3px;
+    background-color: #a1887f;
+    transition: width .3s    
+}
+
+.hero-image .hero-text p {
+    font-size: 2rem;
+    color: #8a8888;
+    line-height: 10px;
+    margin-top: 2.5rem;
+}
+
+.btn-hero {
+    margin-top: 7.5rem;
 }
