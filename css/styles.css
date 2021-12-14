@@ -129,3 +129,17 @@ img {
 .nav-principal a:hover {
     color: var(--text-primary-hover);
 }
+
+.hover-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2.5px;
+    background-color: #a1887f;
+    transition: width .3s;
+}
+
+.hover-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
